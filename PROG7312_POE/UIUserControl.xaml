@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="PROG7312_POE.UIUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PROG7312_POE"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <!-- Hearts -->
+        <Image x:Name="imgHeart1" Height="70" Margin="10,25,0,0" Width="80" Source="/bin/Debug/Image Assests/Heart Full.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="imgHeart2" Height="70" Margin="108,25,0,0" Width="80" Source="/bin/Debug/Image Assests/Heart Full.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="imgHeart3" Height="70" Margin="212,25,0,0" Width="80" Source="/bin/Debug/Image Assests/Heart Full.png" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+
+        <!-- Top Left UI buttons -->
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Background="White" Height="60" Width="60" FontWeight="Bold" FontStyle="Italic" Click="btnExit_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="/bin/Debug/Image Assests/X icon.png"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="btnHome" Content="Home" HorizontalAlignment="Right" Margin="0,75,10,0" VerticalAlignment="Top" Height="60" Width="60" Background="White" FontStyle="Italic" FontWeight="Bold" Click="btnHome_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="/bin/Debug/Image Assests/Home icon.png"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Right" Margin="0,140,10,0" VerticalAlignment="Top" Width="60" Height="60" Background="White" FontWeight="Bold" FontStyle="Italic" Click="btnPause_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="pauseImage" Source="/bin/Debug/Image Assests/Pause icon.png"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button x:Name="btnHelp" Content="Button" HorizontalAlignment="Right" Margin="0,210,10,0" VerticalAlignment="Top" Width="60" Height="60" Click="btnHelp_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image Source="/bin/Debug/Image Assests/Help icon.png"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <!-- Timer -->
+        <Border x:Name="timerBorder" Background="Black" Padding="7,1,7,1" CornerRadius="10" Margin="315,20,315,0" VerticalAlignment="Top" Height="73" HorizontalAlignment="Left">
+            <TextBlock x:Name="txtTime" HorizontalAlignment="Center" Text="00:00:00" VerticalAlignment="Center" Background="White" FontSize="36" FontWeight="Bold" FontStyle="Italic" TextWrapping="Wrap" Padding="5,5,5,5"/>
+        </Border>
+
+    </Grid>
+</UserControl>

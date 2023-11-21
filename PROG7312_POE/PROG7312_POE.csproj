@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B80C50D-C80E-4832-B09F-7D03B411AD21}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PROG7312_POE</RootNamespace>
+    <AssemblyName>PROG7312_POE</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CsvHelper, Version=30.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.30.0.1\lib\net47\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="HelixToolkit.Wpf, Version=2.24.0.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <HintPath>..\packages\HelixToolkit.Wpf.2.24.0\lib\net462\HelixToolkit.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.0.0\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.0\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Classes\Calculator.cs" />
+    <Compile Include="Shared Windows\CountDownWindow.xaml.cs">
+      <DependentUpon>CountDownWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Slot Classes\DrawerSlot.cs" />
+    <Compile Include="Shared Windows\ErrorWindow.xaml.cs">
+      <DependentUpon>ErrorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\FilePaths.cs" />
+    <Compile Include="Game Windows\FindingCallNumbers.xaml.cs">
+      <DependentUpon>FindingCallNumbers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shared Windows\HelpWindow.xaml.cs">
+      <DependentUpon>HelpWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Slot Classes\HolderSlots.cs" />
+    <Compile Include="Game Windows\IdentifyingAreas.xaml.cs">
+      <DependentUpon>IdentifyingAreas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shared Windows\PauseWindow.xaml.cs">
+      <DependentUpon>PauseWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Game Windows\ReplacingBooks.xaml.cs">
+      <DependentUpon>ReplacingBooks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shared Windows\ScoreWindow.xaml.cs">
+      <DependentUpon>ScoreWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Slot Classes\ShelfSlot.cs" />
+    <Compile Include="StartUp.xaml.cs">
+      <DependentUpon>StartUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\TextHandler.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UIUserControl.xaml.cs">
+      <DependentUpon>UIUserControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Shared Windows\CountDownWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shared Windows\ErrorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game Windows\FindingCallNumbers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shared Windows\HelpWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game Windows\IdentifyingAreas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shared Windows\PauseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Game Windows\ReplacingBooks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shared Windows\ScoreWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StartUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="bin\Debug\3D Assests\book.mtl" />
+    <None Include="bin\Debug\3D Assests\book.obj" />
+    <None Include="bin\Debug\3D Assests\book1.mtl" />
+    <None Include="bin\Debug\3D Assests\book1.obj" />
+    <None Include="bin\Debug\3D Assests\book10.mtl" />
+    <None Include="bin\Debug\3D Assests\book10.obj" />
+    <None Include="bin\Debug\3D Assests\book2.mtl" />
+    <None Include="bin\Debug\3D Assests\book2.obj" />
+    <None Include="bin\Debug\3D Assests\book3.mtl" />
+    <None Include="bin\Debug\3D Assests\book3.obj" />
+    <None Include="bin\Debug\3D Assests\book4.mtl" />
+    <None Include="bin\Debug\3D Assests\book4.obj" />
+    <None Include="bin\Debug\3D Assests\book5.mtl" />
+    <None Include="bin\Debug\3D Assests\book5.obj" />
+    <None Include="bin\Debug\3D Assests\book6.mtl" />
+    <None Include="bin\Debug\3D Assests\book6.obj" />
+    <None Include="bin\Debug\3D Assests\book7.mtl" />
+    <None Include="bin\Debug\3D Assests\book7.obj" />
+    <None Include="bin\Debug\3D Assests\book8.mtl" />
+    <None Include="bin\Debug\3D Assests\book8.obj" />
+    <None Include="bin\Debug\3D Assests\book9.mtl" />
+    <None Include="bin\Debug\3D Assests\book9.obj" />
+    <None Include="bin\Debug\3D Assests\drawer.mtl" />
+    <None Include="bin\Debug\3D Assests\drawer.obj" />
+    <None Include="bin\Debug\3D Assests\drawerbook1.mtl" />
+    <None Include="bin\Debug\3D Assests\drawerbook1.obj" />
+    <None Include="bin\Debug\3D Assests\drawerbook2.mtl" />
+    <None Include="bin\Debug\3D Assests\drawerbook2.obj" />
+    <None Include="bin\Debug\3D Assests\drawerbook3.mtl" />
+    <None Include="bin\Debug\3D Assests\drawerbook3.obj" />
+    <None Include="bin\Debug\3D Assests\drawerbook4.mtl" />
+    <None Include="bin\Debug\3D Assests\drawerbook4.obj" />
+    <None Include="bin\Debug\3D Assests\fullshelf.mtl" />
+    <None Include="bin\Debug\3D Assests\fullshelf.obj" />
+    <None Include="bin\Debug\3D Assests\holder1.mtl" />
+    <None Include="bin\Debug\3D Assests\holder1.obj" />
+    <None Include="bin\Debug\3D Assests\holder2.mtl" />
+    <None Include="bin\Debug\3D Assests\holder2.obj" />
+    <None Include="bin\Debug\3D Assests\holder3.mtl" />
+    <None Include="bin\Debug\3D Assests\holder3.obj" />
+    <None Include="bin\Debug\3D Assests\holder4.mtl" />
+    <None Include="bin\Debug\3D Assests\holder4.obj" />
+    <None Include="bin\Debug\3D Assests\holderbook.mtl" />
+    <None Include="bin\Debug\3D Assests\holderbook.obj" />
+    <None Include="bin\Debug\3D Assests\shelve.mtl" />
+    <None Include="bin\Debug\3D Assests\shelve.obj" />
+    <None Include="bin\Debug\PROG7312_POE.exe.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\3D Assests\ShelveTexture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\3D Assests\OGCoverBase1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\3D Assests\OGCoverBase10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\3D Assests\OGCoverBase2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\3D Assests\OGCoverBase3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\3D Assests\OGCoverBase4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\3D Assests\OGCoverBase5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\3D Assests\OGCoverBase6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\3D Assests\OGCoverBase7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\3D Assests\OGCoverBase8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\3D Assests\OGCoverBase9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\3D Assests\PageTexture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bin\Debug\Image Assests\Go image.png" />
+    <Resource Include="bin\Debug\Image Assests\Heart Broken.png" />
+    <Resource Include="bin\Debug\Image Assests\Heart Full.png" />
+    <Resource Include="bin\Debug\Image Assests\Heart Grey.png" />
+    <Resource Include="bin\Debug\Image Assests\Help icon.png" />
+    <Resource Include="bin\Debug\Image Assests\Home icon.png" />
+    <Resource Include="bin\Debug\Image Assests\One image.png" />
+    <Resource Include="bin\Debug\Image Assests\Pause icon.png" />
+    <Resource Include="bin\Debug\Image Assests\Play icon.png" />
+    <Resource Include="bin\Debug\Image Assests\Replay icon.png" />
+    <Resource Include="bin\Debug\Image Assests\Three image.png" />
+    <Resource Include="bin\Debug\Image Assests\Two image.png" />
+    <Resource Include="bin\Debug\Image Assests\X icon.png" />
+    <Resource Include="bin\Debug\3D Assests\drawerTexture.png" />
+    <Resource Include="bin\Debug\3D Assests\OGLabelTexture.png" />
+    <Resource Include="bin\Debug\3D Assests\LabelTexture1.png" />
+    <Resource Include="bin\Debug\3D Assests\LabelTexture2.png" />
+    <Resource Include="bin\Debug\3D Assests\LabelTexture3.png" />
+    <Resource Include="bin\Debug\3D Assests\LabelTexture4.png" />
+    <Resource Include="bin\Debug\3D Assests\LabelTexture5.png" />
+    <Resource Include="bin\Debug\3D Assests\LabelTexture6.png" />
+    <Resource Include="bin\Debug\3D Assests\LabelTexture7.png" />
+    <Resource Include="bin\Debug\3D Assests\DrawerCover1.png" />
+    <Resource Include="bin\Debug\3D Assests\DrawerCover2.png" />
+    <Resource Include="bin\Debug\3D Assests\DrawerCover3.png" />
+    <Resource Include="bin\Debug\3D Assests\DrawerCover4.png" />
+    <Resource Include="bin\Debug\3D Assests\holdertexture.png" />
+    <Resource Include="bin\Debug\3D Assests\HolderCover.png" />
+    <Content Include="bin\Debug\Sound Assests\Button Press.wav" />
+    <Content Include="bin\Debug\Sound Assests\Find Call Number.wav" />
+    <Content Include="bin\Debug\Sound Assests\go audio.wav" />
+    <Content Include="bin\Debug\Sound Assests\Holder Slide.wav" />
+    <Content Include="bin\Debug\Sound Assests\Identifying Areas.wav" />
+    <Content Include="bin\Debug\Sound Assests\Time Tick.wav" />
+    <Content Include="bin\Debug\Sound Assests\Victory.wav" />
+    <Resource Include="bin\Debug\3D Assests\CoverBase1.png" />
+    <Resource Include="bin\Debug\3D Assests\CoverBase10.png" />
+    <Resource Include="bin\Debug\3D Assests\CoverBase2.png" />
+    <Resource Include="bin\Debug\3D Assests\CoverBase3.png" />
+    <Resource Include="bin\Debug\3D Assests\CoverBase4.png" />
+    <Resource Include="bin\Debug\3D Assests\CoverBase5.png" />
+    <Resource Include="bin\Debug\3D Assests\CoverBase6.png" />
+    <Resource Include="bin\Debug\3D Assests\CoverBase7.png" />
+    <Resource Include="bin\Debug\3D Assests\CoverBase8.png" />
+    <Resource Include="bin\Debug\3D Assests\CoverBase9.png" />
+    <Content Include="bin\Debug\PROG7312_POE.exe" />
+    <Content Include="bin\Debug\PROG7312_POE.pdb" />
+    <Content Include="bin\Debug\Sound Assests\Beep.wav" />
+    <Content Include="bin\Debug\Sound Assests\Defeat.wav" />
+    <Content Include="bin\Debug\Sound Assests\Life Loss.wav" />
+    <Content Include="bin\Debug\Sound Assests\Start Screen.wav" />
+    <Content Include="bin\Debug\Sound Assests\Book Place.wav" />
+    <Content Include="bin\Debug\Sound Assests\Replacing Books.wav" />
+    <Content Include="bin\Debug\Sound Assests\Start Button.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BitmapLibrary\BitmapLibrary.csproj">
+      <Project>{961c9415-a888-45c0-a62d-68f2fe6726e9}</Project>
+      <Name>BitmapLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeweyLibrary\DeweyLibrary.csproj">
+      <Project>{fbc00cb8-bd20-4bf0-bcc4-a429c391fee5}</Project>
+      <Name>DeweyLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

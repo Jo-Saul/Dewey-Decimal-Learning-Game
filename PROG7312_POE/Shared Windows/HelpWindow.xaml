@@ -1,0 +1,32 @@
+﻿<Window x:Class="PROG7312_POE.SharedWindows.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PROG7312_POE"
+        mc:Ignorable="d"
+        Title="HelpWindow" Height="450" Width="800"
+        Background="#A5010101"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowState="Maximized">
+    <Grid Height="250" Width="400">
+        
+        <Label x:Name="lbHelp" Content="Help" HorizontalAlignment="Left" Margin="19,10,0,0" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold" FontSize="22" Foreground="#FFB300FF"/>
+
+        <Border Background="White" Padding="1,1,1,1" CornerRadius="10" VerticalAlignment="Center" Height="154" HorizontalAlignment="Center" Width="380">
+            <TextBlock x:Name="txtHelp" HorizontalAlignment="Center" Text="help description" VerticalAlignment="Center" Background="White" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextWrapping="Wrap" Padding="1,1,1,1" Width="360" Height="133"/>
+        </Border>
+
+        <Button x:Name="btnOk" Content="Okay" HorizontalAlignment="Center" Margin="0,210,0,0" VerticalAlignment="Top" Width="78" Height="29" FontStyle="Italic" FontWeight="Bold" Background="White" Click="btnOk_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        
+    </Grid>
+</Window>
