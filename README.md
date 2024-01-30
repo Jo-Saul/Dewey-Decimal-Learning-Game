@@ -1,7 +1,7 @@
 PROG7312 POE Application
 Jo Saul ST10081839
 
-============================================================
+------------------
 Application Type: WPF(.Net Framework)
 Traget Framework: .Net Framework 4.8
 Visual Studio Version: 2022
