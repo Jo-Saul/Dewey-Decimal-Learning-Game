@@ -1,26 +1,26 @@
 PROG7312 POE Application
 Jo Saul ST10081839
 
-============================================================================================
+============================================================
 Application Type: WPF(.Net Framework)
 Traget Framework: .Net Framework 4.8
 Visual Studio Version: 2022
 Github Link: https://github.com/Jo-Saul/PROG7312_POE_Code/tree/master
 
-============================================================================================
+============================================================
 Summary
 ------------------
 This is a program that aims to help users learn the dewi decimal system. The application will
 include three games, each with differnt activities. Currently one the first is implemented.
 
-============================================================================================
+============================================================
 Running the Application
 --------------------------
 To run the application, run the PROG7312_POE.exe application file. Please ensure this file is
 in the bin/debug folder as it needs access to the application's assests.
 Or run the PROG7312_POE shortcut.
 
-============================================================================================
+============================================================
 How To Use
 ------------
 The application opens on the home screen. Here the user can navigate to the three differnt games.
@@ -78,7 +78,7 @@ would be "752 Colour". If the incorrect option is chosen, a live will be lost. I
 lives are lost, it is game over.
 
 
-============================================================================================
+============================================================
 Program Breakdown
 ----------------------------------------
 
